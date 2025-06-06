@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 
 class Person:
@@ -7,8 +7,8 @@ class Person:
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
-        self.wife: "Person" | None = None
-        self.husband: "Person" | None = None
+        self.wife: Optional["Person"] = None
+        self.husband: Optional["Person"] = None
         Person.people[name] = self
 
     def __str__(self) -> str:
